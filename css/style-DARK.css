@@ -353,6 +353,10 @@ margin: 0 0 -4px -8px;
 z-index: 1;
 }
 
+h1.home-page-title span{
+  font-weight: 400;
+}
+
 @media all and (min-width: 1920px) {
   h1.home-page-title {
     font-size: 165px;
