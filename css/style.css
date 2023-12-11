@@ -530,7 +530,7 @@ list-style-type: none;
 .social-icons-home-wrapper ul li {
 display: inline-block;
 margin: 0 auto;
-padding: 0 0 0 5px;
+padding: 0 0 0 15px;
 }
 
 ul.social-icons-home {
@@ -5091,4 +5091,12 @@ margin-right: auto;
 padding: 0;
 overflow: hidden;
 z-index: 2;
+}
+
+:root {
+  --scroll-thumb: WHITE;
+  --scroll-hover: gray;
+ 
+  --scroll-width: 0.5rem;
+  --scroll-thumb-radius: 10px;
 }
