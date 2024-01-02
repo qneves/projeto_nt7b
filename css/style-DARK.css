@@ -5163,4 +5163,7 @@ h6.contact {
     z-index: 2;
 }
 
-
+.image-about img {
+    width: 100%;
+    max-width: 100%;
+}
