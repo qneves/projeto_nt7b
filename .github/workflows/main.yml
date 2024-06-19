@@ -1,0 +1,37 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install git-ftp
+        run: |
+          sudo apt-get update
+          sudo apt-get -qq install git-ftp
+
+      - name: Publish to Production
+        run: |
+          git ftp init --force -vv --user ${{ secrets.DEFAULT_USER }} --passwd ${{ secrets.DEFAULT_PASS }} ${{ secrets.DEFAULT_URL }}
+
+  push-to-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install git-ftp
+        run: |
+          sudo apt-get update
+          sudo apt-get -qq install git-ftp
+
+      - name: Push to Production
+        run: |
+          git ftp push -vv --user ${{ secrets.DEFAULT_USER }} --passwd ${{ secrets.DEFAULT_PASS }} ${{ secrets.DEFAULT_URL }}
