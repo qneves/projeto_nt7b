@@ -594,13 +594,13 @@ h2.section-heading {
     height: 56px;
     top: 55px;
     left: 55px;
-    background: url(../img/logo-light.png) no-repeat;
+    background: url(/img/logo-light.png) no-repeat;
     z-index: 98;
 }
 
 @media only screen and (max-width: 880px) {
     .logo {
-        background: url(../img/logo-light.png) no-repeat;
+        background: url(/img/logo-light.png) no-repeat;
     }
 }
 
@@ -3261,6 +3261,16 @@ button.button-all {
 }
 
 @media only screen and (max-width: 880px) {
+    div.response-float {
+        min-height: 0!important;
+    }
+    div.response-float .contact-img-container,.page-loaded .right-side {
+        height: 0!important;
+    }
+    div.response-float .page-loaded .slide-img img {
+        display: none;
+    }
+
     .page-loaded .slide-img img {
         width: 100vw;
     }
