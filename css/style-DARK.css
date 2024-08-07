@@ -3835,6 +3835,10 @@ p.text {
     }
 }
 
+.image-works img {
+    width: 100%;
+}
+
 /* 37. team / news headers  */
 .section-title-inner {
     font-family: "Oswald", sans-serif;
@@ -5229,6 +5233,7 @@ div.h-widget-float {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 3rem;
 }
 
 #news-blog .noticias .news-bg-wrapper {
